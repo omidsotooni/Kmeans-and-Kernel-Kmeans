@@ -6,3 +6,5 @@ def squaredDistance(vec1, vec2):
         sum += (vec1[i] - vec2[i]) * (vec1[i] - vec2[i]) 
     
     return sum
+
+#---------- utils done
