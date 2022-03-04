@@ -23,3 +23,5 @@ def kernel(data, sigma):
                 Gram[i][j] = exp(-square_dist/base)
                 Gram[j][i] = Gram[i][j]
     return Gram 
+
+#---------- end of kernel_k_means
