@@ -42,3 +42,4 @@ if __name__ == "__main__":
     print ("NMI = ", res_NMI)
     
 
+#--------- main_kernel_k_means done
