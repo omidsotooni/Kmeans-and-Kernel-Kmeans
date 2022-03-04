@@ -5,7 +5,7 @@ from evaluation import *
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print "[usage] <data-file> <ground-truth-file>"
+        print ("[usage] <data-file> <ground-truth-file>")
         exit(1) 
     
     dataFilename = sys.argv[1]
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     nDim = len(data[0]) 
    
     K = 3  # Suppose there are 2 clusters
-    print 'K=',K
+    print ('K=',K)
 
     # use the first two data points as initial cluster centers
     centers = []
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     res_Purity = purity(groundtruth, results) 
     res_NMI = NMI(groundtruth, results) 
     
-    print "Purity =", res_Purity
-    print "NMI = ", res_NMI
+    print ("Purity =", res_Purity)
+    print ("NMI = ", res_NMI)
     
 

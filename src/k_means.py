@@ -95,13 +95,13 @@ def kmeans(data, centers, maxIter = 100, tol = 1e-6):
         
         curDistance = computeSSE(data, centers, clusterID) # objective function
         if lastDistance - curDistance < tol or (lastDistance - curDistance)/lastDistance < tol:
-            print "# of iterations:", iter 
-            print "SSE = ", curDistance
+            print ("# of iterations:", iter )
+            print ("SSE = ", curDistance)
             return clusterID
         
         lastDistance = curDistance
         
-    print "# of iterations:", iter 
-    print "SSE = ", curDistance
+    print ("# of iterations:", iter )
+    print ("SSE = ", curDistance)
     return clusterID
 

@@ -1,12 +1,17 @@
+import imp
 import sys
 from LoadData import * 
 from k_means import * 
 from evaluation import * 
 from kernel_k_means import * 
+import matplotlib.pyplot as plt
+from scipy.spatial.distance import cdist
+import numpy as np
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print "[usage] <data-file> <ground-truth-file>"
+        print ("[usage] <data-file> <ground-truth-file>")
         exit(1) 
     
     dataFilename = sys.argv[1]
@@ -22,7 +27,7 @@ if __name__ == "__main__":
     nDim = len(data[0]) 
    
     K = 5  # Suppose there are 2 clusters
-    print 'K=',K
+    print ('K=',K)
 
     centers = []
     for i in range(K):
@@ -33,7 +38,7 @@ if __name__ == "__main__":
     res_Purity = purity(results, groundtruth)
     res_NMI = NMI(results, groundtruth) 
     
-    print "Purity =", res_Purity
-    print "NMI = ", res_NMI
+    print ("Purity =", res_Purity)
+    print ("NMI = ", res_NMI)
     
 
