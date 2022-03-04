@@ -5,8 +5,8 @@ from k_means import *
 from evaluation import * 
 from kernel_k_means import * 
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
 import numpy as np
+from scipy.spatial.distance import cdist
 
 
 if __name__ == "__main__":
