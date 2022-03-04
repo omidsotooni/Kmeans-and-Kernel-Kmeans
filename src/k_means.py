@@ -105,3 +105,4 @@ def kmeans(data, centers, maxIter = 100, tol = 1e-6):
     print ("SSE = ", curDistance)
     return clusterID
 
+#----------- end of k_means
