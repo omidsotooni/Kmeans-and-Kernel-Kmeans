@@ -77,3 +77,4 @@ def NMI(groundtruthAssignment, algorithmAssignment):
                 mi += (p[(c,t)]/n_c) * log( (p[(c,t)]/n_c) / ((occ_c[c]/n_c)*(occ_t[t]/n_t)) )
     NMI = mi / sqrt(float(h_c*h_t))
     return NMI
+#--------------- end evaluation
