@@ -26,20 +26,20 @@ if __name__ == "__main__":
 
     nDim = len(data[0]) 
    
-    K = 5  # Suppose there are 2 clusters
+    K = 2  # Suppose there are 2 clusters
     print ('K=',K)
 
     centers = []
     for i in range(K):
         centers.append(data[i])
     
-    results = kmeans(data, centers)
+    results,centers = kmeans(data, centers)
 
     res_Purity = purity(results, groundtruth)
     res_NMI = NMI(results, groundtruth) 
     
     print ("Purity =", res_Purity)
     print ("NMI = ", res_NMI)
-    
+
 
 #--------- main_kernel_k_means done
