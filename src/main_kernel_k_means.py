@@ -40,6 +40,18 @@ if __name__ == "__main__":
     
     print ("Purity =", res_Purity)
     print ("NMI = ", res_NMI)
-
+    
+    points = []
+    
+    for i in range(len(results)):
+        if (results[i]!=groundtruth[i]):
+            points.append(data[i])
+            
+    fig = plt.figure()    
+    plt.scatter(*zip(*data),c=results,marker='s',facecolor="w" ) 
+    # یک ضربدر روی داده های اشتباه میزند
+    plt.scatter(*zip(*points),marker="x",edgecolor="r",s=70);    
+    plt.savefig()
+    plt.show()
 
 #--------- main_kernel_k_means done
